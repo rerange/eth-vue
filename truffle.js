@@ -92,7 +92,7 @@ module.exports = {
     ganache: {
       host: "127.0.0.1",
       port: 8545,
-      network_id: "*",
+      network_id: "5777",
       from: "",  // Findable under Ganache -> Addresses. Auth with Metamask and private key
       gas: 4444444
     }
