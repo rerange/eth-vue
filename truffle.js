@@ -2,9 +2,11 @@ var bip39 = require("bip39");
 var hdkey = require('ethereumjs-wallet/hdkey');
 var ProviderEngine = require("web3-provider-engine");
 var WalletSubprovider = require('web3-provider-engine/subproviders/wallet.js');
-var Web3Subprovider = require("web3-provider-engine/subproviders/web3.js");
-var Web3 = require("web3");
-const FilterSubprovider = require('web3-provider-engine/subproviders/filters.js');
+var CacheSubprovider = require('web3-provider-engine/subproviders/cache.js')
+var FilterSubprovider = require('web3-provider-engine/subproviders/filters.js')
+var VmSubprovider = require('web3-provider-engine/subproviders/vm.js')
+var NonceSubprovider = require('web3-provider-engine/subproviders/nonce-tracker.js')
+var RpcSubprovider = require("web3-provider-engine/subproviders/rpc.js");
 
 // Get our mnemonic and create an hdwallet
 var mnemonic = "piano file obey immense polar rack great subject clutch camera maid ostrich";
@@ -15,13 +17,25 @@ var wallet_hdpath = "m/44'/60'/0'/0/";
 var wallet = hdwallet.derivePath(wallet_hdpath + "0").getWallet();
 var address = "0x" + wallet.getAddress().toString("hex");
 
-var providerUrl = "https://testnet.infura.io";
+var providerUrl = "https://testrpc.metamask.io/";
 var engine = new ProviderEngine();
+
+// cache layer
+engine.addProvider(new CacheSubprovider())
+ 
 // filters
-engine.addProvider(new FilterSubprovider());
+engine.addProvider(new FilterSubprovider())
+ 
+// pending nonce
+engine.addProvider(new NonceSubprovider())
+ 
+// vm
+engine.addProvider(new VmSubprovider())
 
 engine.addProvider(new WalletSubprovider(wallet, {}));
-engine.addProvider(new Web3Subprovider(new Web3.providers.HttpProvider(providerUrl)));
+engine.addProvider(new RpcSubprovider({
+  rpcUrl: providerUrl,
+}));
 engine.start(); // Required by the provider engine.
 
 module.exports = {
@@ -41,9 +55,9 @@ module.exports = {
     },
     ganache: {
       host: "127.0.0.1",
-      port: 7545,
+      port: 8545,
       network_id: "*",
-      from: "93D64A209E5A8E35CD1E462FCBB6BDB99C301FD07EB1C6BE26FB6DCD1C783C3C",  // Findable under Ganache -> Addresses. Auth with Metamask and private key
+      from: "",  // Findable under Ganache -> Addresses. Auth with Metamask and private key
       gas: 4444444
     }
   },
