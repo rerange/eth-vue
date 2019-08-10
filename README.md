@@ -1,15 +1,15 @@
 [![Made in Nigeria](https://img.shields.io/badge/made%20in-nigeria-008751.svg?style=flat-square)](https://github.com/acekyd/made-in-nigeria)
 ## eth-vue Truffle Box: With Ganache Blockchain Option, Ropsten Network Configuration, and Gravatar access
 <br><br>
-![eth-vue](https://raw.githubusercontent.com/DOkwufulueze/eth-vue/master/box-img-lg.png)
+![eth-vue](https://raw.githubusercontent.com/rerange/eth-vue/master/box-img-lg.png)
 
 This Truffle Box provides everything you need to quickly build Ethereum dApps that have authentication features with [vue](https://github.com/vuejs/vue), including configuration for easy deployment to the Ropsten Network. It's also Gravatar-enabled. Connecting to a running [Ganache](https://github.com/trufflesuite/ganache) blockchain network from Truffle is also possible -- for fast development and testing purposes.<br>
-Built on [Truffle 4](https://github.com/trufflesuite/truffle/releases), [eth-vue](https://github.com/DOkwufulueze/eth-vue) uses [vuex](https://github.com/vuejs/vuex) for state management, [vuex-persist](https://github.com/championswimmer/vuex-persist) for local storage of app state, and [vue-router](https://github.com/vuejs/vue-router) for routing.
+Built on [Truffle 4](https://github.com/trufflesuite/truffle/releases), [eth-vue](https://github.com/rerange/eth-vue) uses [vuex](https://github.com/vuejs/vuex) for state management, [vuex-persist](https://github.com/championswimmer/vuex-persist) for local storage of app state, and [vue-router](https://github.com/vuejs/vue-router) for routing.
 Authentication functionalities are handled by Smart Contracts running on the Ethereum blockchain.
 
 With deployment configuration for the Ropsten Network, deployment to the remote test network doesn't have to be a pain anymore. It's now as simple as `truffle migrate --network ropsten`
 
-If you have a running Ganache blockchain network, configuring with [eth-vue](https://github.com/DOkwufulueze/eth-vue) will connect you immediately to the private blockchain. Visit the [Ganache](https://github.com/trufflesuite/ganache) page for installation and startup instructions, install Ganache, and [eth-vue](https://github.com/DOkwufulueze/eth-vue) will connect accordingly.
+If you have a running Ganache blockchain network, configuring with [eth-vue](https://github.com/rerange/eth-vue) will connect you immediately to the private blockchain. Visit the [Ganache](https://github.com/trufflesuite/ganache) page for installation and startup instructions, install Ganache, and [eth-vue](https://github.com/rerange/eth-vue) will connect accordingly.
 
 Simply unbox and start building your own dApp.
 
@@ -19,15 +19,15 @@ Simply unbox and start building your own dApp.
         npm install -g truffle
 <br>
 
-###### NOTE: If unboxing DOkwufulueze/eth-vue had failed previously due to absence of node-gyp, simply run `npm install --global node-gyp`. Or if it failed due to a problem with an existing node-gyp, run `node-gyp rebuild`. Else ignore this note and move on to the next instruction.
+###### NOTE: If unboxing rerange/eth-vue had failed previously due to absence of node-gyp, simply run `npm install --global node-gyp`. Or if it failed due to a problem with an existing node-gyp, run `node-gyp rebuild`. Else ignore this note and move on to the next instruction.
 <br>
 
-- Enter your development directory [eg. cd into a newly created `eth-vue` directory] and unbox `DOkwufulueze/eth-vue`
+- Enter your development directory [eg. cd into a newly created `eth-vue` directory] and unbox `rerange/eth-vue`
 
-        truffle unbox DOkwufulueze/eth-vue
+        truffle unbox rerange/eth-vue
     Or clone this repository from GitHub and `cd` into the `eth-vue` directory:
 
-        git clone https://github.com/DOkwufulueze/eth-vue.git
+        git clone https://github.com/rerange/eth-vue.git
 <br>
 
 - Configure your environment
@@ -73,7 +73,7 @@ Simply unbox and start building your own dApp.
 
 - Install npm dependencies if necessary.
 
-     ###### NOTE: If you unboxed this boilerplate from Truffle [`truffle unbox DOkwufulueze/eth-vue`], then running `npm install` is not necessary since unboxing runs `npm install` by default. But if you cloned this boilerplate from GitHub [`git clone https://github.com/DOkwufulueze/eth-vue.git`], please run `npm install` as stated below.
+     ###### NOTE: If you unboxed this boilerplate from Truffle [`truffle unbox rerange/eth-vue`], then running `npm install` is not necessary since unboxing runs `npm install` by default. But if you cloned this boilerplate from GitHub [`git clone https://github.com/rerange/eth-vue.git`], please run `npm install` as stated below.
 
         npm install
 <br>
@@ -137,10 +137,10 @@ The default port for `truffle develop` is 9545, so it doesn't conflict with any 
 ## And that's it, you're DONE!
 
 <br><br>
-### Please send bug issues you may encounter to [Issues](https://github.com/DOkwufulueze/eth-vue/issues)
+### Please send bug issues you may encounter to [Issues](https://github.com/rerange/eth-vue/issues)
 <br><br>
 ## Copyleft
-![Copyleft](https://raw.githubusercontent.com/DOkwufulueze/eth-vue/master/static/images/copyleft.png) 2017 Daniel Okwufulueze
+![Copyleft](https://raw.githubusercontent.com/rerange/eth-vue/master/static/images/copyleft.png) 2017 Daniel Okwufulueze
 <br><br>
 ## Licence
-This dApp is distributed under the [GNU GPL-3.0](https://github.com/DOkwufulueze/eth-vue/blob/master/LICENCE.md) licence.
+This dApp is distributed under the [GNU GPL-3.0](https://github.com/rerange/eth-vue/blob/master/LICENCE.md) licence.
